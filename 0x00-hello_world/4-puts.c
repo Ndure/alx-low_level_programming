@@ -1,6 +1,8 @@
+/**start code
+*/
 #include <stdio.h>
 /**
-* Entry
+* Entry- Main
 *Return 0 if successful
 */
 int main(void)
