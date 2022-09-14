@@ -1,10 +1,11 @@
 #include "main.h"
 /**
 * main - Print "_putchar" followed by a new line.
+* c char "c" for "_inputchar"
 *Return: 0
 
 */
-
+int _putchar(char c);
 int main(void)
 {
 char main[] = "Main";
