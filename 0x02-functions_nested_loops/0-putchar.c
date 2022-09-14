@@ -1,18 +1,17 @@
 #include "main.h"
 /**
-* main - Print "_putchar" followed by a new line.
+* putchar - Print "_putchar" followed by a new line.
 * c char "c" for "_inputchar"
 *Return: 0
 
 */
-int _putchar(char c);
-int main(void)
+int putchar(void)
 {
-char main[] = "Main";
+char putchar[] = "_putchar";
 int i = 0;
-while (main[i] != '\0')
+while (putchar[i] != '\0')
 {
-_putchar(main[i]);
+_putchar(putchar[i]);
 i++;
 }
 _putchar('\n');
