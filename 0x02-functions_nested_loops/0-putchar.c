@@ -1,27 +1,19 @@
-/*
- * File: 0-putchar.c
- * Auth:Nicholas Ndure Maina
- *
- */
-
-#include "0-putchar.c"
-
+#include "main.h"
 /**
- * main - Prints "_putchar" followed by a new line.
- *
- * Return: Always 0.
- */
+* main - Print "_putchar" followed by a new line.
+*Return: 0
+
+*/
+
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
-
-	return (0);
+char main[] = "Main";
+int i = 0;
+while (main[i] != '\0')
+{
+_putchar(main[i]);
+i++;
+}
+_putchar('\n');
+return (0);
 }
