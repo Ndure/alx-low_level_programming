@@ -1,4 +1,4 @@
-#include "main.h"
+#include "coding.h"
 
 /**
  * infinite_add - function with 4 arguments
