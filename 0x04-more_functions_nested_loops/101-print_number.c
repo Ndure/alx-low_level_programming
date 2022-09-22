@@ -1,33 +1,50 @@
 #include "main.h"
 
 /**
- * print_triangle - print a triangle aligned right, using '#'
- * @size: Size of triangle
+ * print_number - Print any number one character at a time
+ * @n: Number to print
+ *
+ * Return: Nothing
  */
-void print_triangle(int size)
+void print_number(int n)
 {
-	int c, i, j;
+	long hn;
+	long n2 = n;
 
-	c = 0;
-	i = size - 1;
-	while (c < size)
+	if (n2 < 0)
 	{
-		i = size - 1 - c;
-		j = c + 1;
-		while (i > 0)
-		{
-			_putchar(' ');
-			i--;
-		}
-		while (j > 0)
-		{
-			_putchar('#');
-			j--;
-		}
-		_putchar('\n');
-		c++;
+		_putchar('-');
+		n2 *= -1;
 	}
-
-	if (size <= 0)
-		_putchar('\n');
+	if (n2 / 100000 != 0)
+	{
+		hn = n2 / 100000;
+		_putchar(hn / 10000 % 10 + '0');
+		_putchar(hn / 1000 % 10 + '0');
+		_putchar(hn / 100 % 10 + '0');
+		_putchar(hn / 10 % 10 + '0');
+		_putchar(hn % 10 + '0');
+	}
+		hn = n2 % 100000;
+		if (hn / 10000 % 10 != 0)
+		{
+			_putchar(hn / 10000 % 10 + '0');
+			_putchar(hn / 1000 % 10 + '0');
+			_putchar(hn / 100 % 10 + '0');
+			_putchar(hn / 10 % 10 + '0');
+		}
+		else if (hn / 1000 % 10 != 0)
+		{
+			_putchar(hn / 1000 % 10 + '0');
+			_putchar(hn / 100 % 10 + '0');
+			_putchar(hn / 10 % 10 + '0');
+		}
+		else if (hn / 100 % 10 != 0)
+		{
+			_putchar(hn / 100 % 10 + '0');
+			_putchar(hn / 10 % 10 + '0');
+		}
+		else if (hn / 10 % 10 != 0)
+			_putchar(hn / 10 % 10 + '0');
+		_putchar(hn % 10 + '0');
 }
