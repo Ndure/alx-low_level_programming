@@ -1,23 +1,22 @@
-#include <stdio.h>
-
-int main(void)
+#include "holberton.h"
+/**
+ * print_number - prints an integer
+ * @n:.input integer parameter
+ *
+ *
+ */
+void print_number(int n)
 {
-  int n;
-  int a[5];
-  int *p;
+	unsigned int i = n;
 
-  a[2] = 1024;
-  p = &n;
-  /*
-   * the ocde begins after these comments
-   * Things that i should put in mind
-   * - do not use a
-   * - do not modify p
-   * - in this case, only one statement
-   * - you are not allowed to code anything else than this line of code
-   */
-  *(p + 5) = 98;
-  /* ...so that this prints 98\n */
-  printf("a[2] = %d\n", a[2]);
-  return (0);
+	if (n < 0)
+	{
+		_putchar(45);
+		i = -i;
+	}
+	if (i / 10)
+	{
+		print_number(i / 10);
+	}
+	_putchar(i % 10 + '0');
 }
